@@ -18,3 +18,7 @@
 .empty {
   background-color: greenyellow;
 }
+
+.checked {
+  background-color: white;
+}
