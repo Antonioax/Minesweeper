@@ -10,3 +10,11 @@
   height: 40px;
   width: 40px;
 }
+
+.bomb {
+  background-color: orangered;
+}
+
+.empty {
+  background-color: greenyellow;
+}
