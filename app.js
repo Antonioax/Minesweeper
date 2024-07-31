@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     )
       return;
     if (square.classList.contains("bomb")) {
-      alert("Game Over!");
+      gameOver(square);
     } else {
       let total = square.getAttribute("data");
       if (total != 0) {
@@ -153,6 +153,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const newSquare = document.getElementById(newId);
         click(newSquare);
       }
-    }, 10);
+    }, 15);
+  }
+
+  function gameOver(square) {
+    isGameOver = true;
+
+    squares.forEach((square) => {
+      if (square.classList.contains("bomb")) {
+        square.innerHTML = "B";
+      }
+    });
   }
 });
