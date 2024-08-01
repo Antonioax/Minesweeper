@@ -28,6 +28,8 @@
   justify-content: center;
   align-items: center;
   font-weight: 700;
+
+  background-color: rgb(15 23 42);
 }
 
 .mine-grid div[data="1"] {
@@ -82,14 +84,27 @@
   transform: translate(-50%, -50%); /* Center the image */
 }
 
-.bomb {
-  background-color: orangered;
+.bomb-exploded {
+  position: relative;
+  width: 36px; /* Adjust to your needs */
+  height: 36px; /* Adjust to your needs */
+  background-color: rgb(253, 114, 0) !important;
 }
 
-.empty {
-  background-color: rgb(15 23 42);
+.bomb-exploded::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%; /* Adjust to shrink the image */
+  height: 70%; /* Adjust to shrink the image */
+  background-image: url('/assets/bomb.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%); /* Center the image */
 }
 
-.checked {
+.mine-grid div.checked {
   background-color: rgb(255, 255, 255);
 }

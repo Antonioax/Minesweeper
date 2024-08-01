@@ -181,8 +181,11 @@ document.addEventListener("DOMContentLoaded", () => {
     isGameOver = true;
 
     squares.forEach((square) => {
-      if (square.classList.contains("bomb")) {
-        square.innerHTML = "B";
+      if (
+        square.classList.contains("bomb") &&
+        !square.classList.contains("flag")
+      ) {
+        square.classList.add("bomb-exploded");
       }
     });
   }
