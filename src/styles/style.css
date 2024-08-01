@@ -62,6 +62,26 @@
   color: #4682b4; /* Steel Blue */
 }
 
+.flag {
+  position: relative;
+  width: 36px; /* Adjust to your needs */
+  height: 36px; /* Adjust to your needs */
+}
+
+.flag::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%; /* Adjust to shrink the image */
+  height: 70%; /* Adjust to shrink the image */
+  background-image: url('/assets/flag.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%); /* Center the image */
+}
+
 .bomb {
   background-color: orangered;
 }

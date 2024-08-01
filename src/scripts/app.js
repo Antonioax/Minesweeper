@@ -94,13 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!square.classList.contains("checked") && flags < bombAmount) {
       if (!square.classList.contains("flag")) {
         square.classList.add("flag");
-        square.innerHTML = "F";
         flags++;
 
         checkForWin();
       } else {
         square.classList.remove("flag");
-        square.innerHTML = "";
         flags--;
       }
     }
