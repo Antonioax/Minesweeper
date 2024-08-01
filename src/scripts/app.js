@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const grid = document.querySelector(".grid");
+  const grid = document.querySelector(".mine-grid");
 
   let width = 10;
   let bombAmount = 20;
